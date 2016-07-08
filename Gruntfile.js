@@ -11,17 +11,18 @@ module.exports = function(grunt){
 			"jQuery": true
 		  }
 		},
-		js:['js/**/*.js']
+		bin:[],
+		js:['amgj/public/js/page/**/*']
 	},
 		clean:{
-			all:['dist/**/*']
+			public:['amgjDist/public/js/**/*','amgjDist/public/css/**/*','amgjDist/public/img/**/*','amgjDist/public/font/**/*'],
+			html:['amgjDist/application/views/page/**/*'],
+			control:['amgjDist/application/controllers/**/*']
 			},
 		copy:{
-			html:{src: ['grunt.html'], dest: 'dist/index.html'},
-			style:{src: ['style.css'], dest: 'dist/style.css'},
-			view:{expand: true, src: ['html/**/*'], dest: 'dist'},
-			include:{expand: true, src: ['include/**/*'], dest: 'dist'},
-			fonts:{expand: true, src: ['fonts/**/*'], dest: 'dist'},
+			font:{expand: true, src: ['**'],cwd: 'amgj/public/font/', dest: 'amgjDist/public/font/'},
+			html:{expand: true, src: ['**'],cwd: 'amgj/application/views/page/', dest: 'amgjDist/application/views/page/'},
+			control:{expand: true, src: ['**'],cwd: 'amgj/application/controllers/', dest: 'amgjDist/application/controllers/'}
 			},
         cssmin: {
             options: {                                       //配置
@@ -29,17 +30,17 @@ module.exports = function(grunt){
                 banner: '/*! This is the grunt test ' +      //添加自定义的banner
                 '<%= grunt.template.today("yyyy-mm-dd") %> */'
             },
-            basic: {expand: true, cwd: 'css', src: ['*.css'], dest: 'dist/css'}
+            basic: {cwd: 'amgj/public/css/', src: ['*.css'], dest: 'amgjDist/public/css/css.css'}
         },
         uglify: {
             options: {
                 banner: '/*! This is uglify test - ' +
                 '<%= grunt.template.today("yyyy-mm-dd") %> */'
             },
-			bin: {src: ['bin/jquery.js','bin/underscore.js','bin/config.js','bin/common.js','bin/route.js','bin/api.js','bin/control.js','bin/model.js'], dest: 'dist/bin/drunk.js'},
-			api: {expand: true, cwd: 'api', src: ['*.js'], dest: 'dist/api'},
-			control: {expand: true, cwd: 'control', src: ['*.js'], dest: 'dist/control'},
-			model: {expand: true, cwd: 'model', src: ['*.js'], dest: 'dist/model'},
+			bin: {src: ['amgj/public/js/bin/**/*'], dest: 'amgj/public/js/cache/bin.js'},
+			page: {src: ['amgj/public/js/page/**/*'], dest: 'amgj/public/js/cache/page.js'},
+			thirdParty:{src: ['amgj/public/js/thirdParty/**/*'], dest: 'amgj/public/js/cache/thirdParty.js'},
+			end:{src: ['amgj/public/js/cache/bin.js','amgj/public/js/cache/thirdParty.js','amgj/public/js/cache/page.js'], dest: 'amgjDist/public/js/js.js'}
             },
 		htmlmin:{
 			options: {
@@ -63,7 +64,7 @@ module.exports = function(grunt){
             pngquant: true
           },
 			img:{
-				 expand: true, cwd: 'img', src: ['*.{png,jpg,jpeg,gif,webp,svg}'], dest: 'dist/img'
+				 expand: true, cwd: 'amgj/public/img/', src: ['*.{png,jpg,jpeg,gif,webp,svg}'], dest: 'amgjDist/public/img/'
 			}
 			},
         watch: {
