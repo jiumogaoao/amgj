@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+*,input,textarea,button,image {
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  border: 0px;
+  box-sizing: border-box;
+  box-shadow: none;
+  border-radius: 0px;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none; 
+  font-family:"Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,'SimHei',\9ED1\4F53,'LiHei Pro Medium', 'HanHei SC', 'STHeiti';
+  -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #8ea7c8; 
+font-family:"Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,'SimHei',\9ED1\4F53,'LiHei Pro Medium', 'HanHei SC', 'STHeiti';
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+color: #8ea7c8; 
+font-family:"Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,'SimHei',\9ED1\4F53,'LiHei Pro Medium', 'HanHei SC', 'STHeiti';
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+color: #8ea7c8; 
+font-family:"Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,'SimHei',\9ED1\4F53,'LiHei Pro Medium', 'HanHei SC', 'STHeiti';
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+color: #8ea7c8; 
+font-family:"Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,'SimHei',\9ED1\4F53,'LiHei Pro Medium', 'HanHei SC', 'STHeiti';
+} 
+img{
+	display:block;}
+html {
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  font-family:"Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,'SimHei',\9ED1\4F53,'LiHei Pro Medium', 'HanHei SC', 'STHeiti';
+  overflow:hidden;}
+.clear{
+  clear: both;
+}
+body {
+  position: relative; 
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  background-color: #e3e6e8;
+}
+body.browser{
+	width:100%;
+	min-width:1200px;
+	}
+body.phone{
+	width:750px;}
+.phone .pH,.browser .bH{
+	display:none;
+	}
+.centerFrame{
+	width:1200px;
+	margin:auto;
+	position:relative;
+	}
+.phone .centerFrame{
+	width:750px;
+	}
