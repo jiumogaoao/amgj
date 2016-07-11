@@ -7,7 +7,9 @@
 
 <body>
 <div id="all">
-
+	<div id="oldPage">
+		
+	</div>
 </div>
 </body>
 </html>
