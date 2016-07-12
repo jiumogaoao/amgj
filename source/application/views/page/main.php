@@ -12,6 +12,7 @@
 </head>
 
 <body class="browser">
+<div id="head"></div>
 <div id="all">
 	<div id="oldPage">
 		<div class="warp">
@@ -21,6 +22,7 @@
 		</div>
 	</div>
 </div>
+<div id="foot"></div>
 </body>
 </html>
 <script type="text/javascript" src="/public/js/bin/main.js"></script>

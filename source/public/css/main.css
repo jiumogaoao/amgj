@@ -67,7 +67,29 @@ body.phone{
 .phone .centerFrame{
 	width:750px;
 	}
-#all,#oldPage,#newPage,.warp{
+#head{
+  position: absolute;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+}
+#foot{
+  position: absolute;
+  bottom:0px;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+}
+#all{
+  position: absolute;
+  top:60px;
+  left: 0px;
+  right: 0px;
+  bottom: 60px;
+  overflow: hidden;
+}
+#oldPage,#newPage,.warp{
   position: absolute;
   top:0px;
   left: 0px;
