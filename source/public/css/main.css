@@ -36,7 +36,8 @@ html {
   -webkit-transform-origin: top left;
   transform-origin: top left;
   font-family:"Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,'SimHei',\9ED1\4F53,'LiHei Pro Medium', 'HanHei SC', 'STHeiti';
-  overflow:hidden;}
+  overflow:hidden;
+height: 100%;}
 .clear{
   clear: both;
 }
@@ -45,6 +46,9 @@ body {
   -webkit-transform-origin: top left;
   transform-origin: top left;
   background-color: #e3e6e8;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
 }
 body.browser{
 	width:100%;
@@ -63,3 +67,17 @@ body.phone{
 .phone .centerFrame{
 	width:750px;
 	}
+#all,#oldPage,#newPage,.warp{
+  position: absolute;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+}
+.warp .iscroll{
+  width: 100%;
+  position: absolute;
+  top:0px;
+  left: 0px;
+}
