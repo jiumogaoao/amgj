@@ -73,6 +73,7 @@ body.phone{
   left: 0px;
   right: 0px;
   height: 60px;
+  z-index: 10;
 }
 #foot{
   position: absolute;
@@ -80,13 +81,14 @@ body.phone{
   left: 0px;
   right: 0px;
   height: 60px;
+  z-index: 10;
 }
 #all{
   position: absolute;
-  top:60px;
+  top:0px;
   left: 0px;
   right: 0px;
-  bottom: 60px;
+  bottom: 0px;
   overflow: hidden;
 }
 #oldPage,#newPage,.warp{
