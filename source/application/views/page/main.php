@@ -26,3 +26,5 @@
 </body>
 </html>
 <script type="text/javascript" src="/public/js/bin/main.js"></script>
+<script type="text/javascript" src="/public/js/bin/view.js"></script>
+<script type="text/javascript" src="/public/js/bin/control.js"></script>
