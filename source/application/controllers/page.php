@@ -20,6 +20,6 @@ class page extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('page/main');
+		$this->load->view('page/index');
 	}
 }

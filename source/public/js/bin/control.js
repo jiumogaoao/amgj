@@ -1,5 +1,6 @@
 // JavaScript Document
-;(function ($, obj, config) {
+;(function () {
+	app.route={}
     /*页面栈*/
     var pageArry=[];
     /*跳页方法*/
@@ -33,7 +34,7 @@
     });
     changePage();
     /*回退方法*/
-    obj.back = function(){
+    app.route.back = function(){
         /*出栈*/
         pageArry=_.initial(pageArry);
         /*调用栈尾的control*/
