@@ -25,7 +25,6 @@
         /*过滤hash中的get信息*/
         hash = hash.split("?")[0];
         hash += "/"+state;
-        debugger;
         app.view.load(hash);
     }
 /*监测hash变化，调用跳页方法*/
