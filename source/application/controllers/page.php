@@ -18,8 +18,12 @@ class page extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function index($state=0)
 	{
+		$data['style']="public/css/main.css";
+		$data['script']="public/js/page/index.js";
 		$this->load->view('page/index');
+		$this->load->view('template/style',$data);
+		$this->load->view('template/script',$data);
 	}
 }
