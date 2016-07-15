@@ -20,7 +20,12 @@ class main extends CI_Controller {
 	 */
 	public function index()
 	{
-		
+		$headData['style']=['public/css/main.css'];
+		$headData['script']=['public/js/bin/zepto.js','public/js/bin/event.js','public/js/bin/ajax.js','public/js/bin/iscroll-probe.js','public/js/bin/touch.js'];
+		$this->load->view('template/style',$headData);
+		$this->load->view('template/script',$headData);
 		$this->load->view('page/main');
+		$footData['script']=['public/js/bin/main.js','public/js/bin/view.js','public/js/bin/control.js'];
+		$this->load->view('template/script',$footData);
 	}
 }

@@ -20,10 +20,11 @@ class page extends CI_Controller {
 	 */
 	public function index($state=0)
 	{
-		$data['style']="public/css/main.css";
-		$data['script']="public/js/page/index.js";
+		$data['style']=["public/css/main.css"];
+		$data['script']=["public/js/page/index.js","public/js/page/indexB.js"];
 		$this->load->view('page/index');
 		$this->load->view('template/style',$data);
 		$this->load->view('template/script',$data);
+		
 	}
 }
