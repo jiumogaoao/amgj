@@ -9,11 +9,7 @@
 <div id="head"></div>
 <div id="all">
 	<div id="oldPage">
-		<div class="warp">
-			<div class="iscroll">
-				<div class="centerFrame"></div>
-			</div>
-		</div>
+		
 	</div>
 </div>
 <div id="foot"></div>

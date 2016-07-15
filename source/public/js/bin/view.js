@@ -7,7 +7,7 @@
                         $("#newPage").attr("id","oldPage");
                         $("#oldPage").attr("style","");
                         $("#hidePage").attr("id","newPage");
-                        $("#newPage").empty();
+                        $("#newPage").remove();
     }
 app.view.show={
     show:function(state){/*显隐渐变，正反向一样*/

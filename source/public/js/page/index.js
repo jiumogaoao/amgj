@@ -1,1 +1,1 @@
-alert($("body").html());
+app.view.show.show(sorceData.state);
