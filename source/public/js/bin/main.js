@@ -1,7 +1,7 @@
 (function() {
     window.app = {};
     /********************通用**********************/
-    app.readFn = {}
+    app.readFn = {};
     $(document).ready(function() {
         $.each(app.readFn, function(index, fn) {
             fn();
@@ -16,14 +16,14 @@
         if (iIE) {
             var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
             reIE.test(userAgent);
-            var fIEVersion = parseFloat(RegExp["$1"]);
+            var fIEVersion = parseFloat(RegExp('$1'));
             return fIEVersion;
         } else {
             return false;
         }
     }
     /*是否手机*/
-    function is_mobile() {
+    function is_mobileA() {
         var regex_match = /(nokia|iphone|android|motorola|^mot-|softbank|foma|docomo|kddi|up.browser|up.link|htc|dopod|blazer|netfront|helio|hosin|huawei|novarra|CoolPad|webos|techfaith|palmsource|blackberry|alcatel|amoi|ktouch|nexian|samsung|^sam-|s[cg]h|^lge|ericsson|philips|sagem|wellcom|bunjalloo|maui|symbian|smartphone|midp|wap|phone|windows ce|iemobile|^spice|^bird|^zte-|longcos|pantech|gionee|^sie-|portalmmm|jigs browser|hiptop|^benq|haier|^lct|operas*mobi|opera*mini)/i;
         var u = navigator.userAgent;
         if (null == u) {
@@ -31,21 +31,20 @@
         }
         var result = regex_match.exec(u);
         if (null == result) {
-            return false
+            return false;
         } else {
-            return true
+            return true;
         }
     }
-    var is_mobile = is_mobile();
+    var is_mobile = is_mobileA();
     /********************自适应**********************/
     var myScroll = {
         refresh: function() {}
-    }
-    app.scrollFn = {}
+    };
+    app.scrollFn = {};
     app.scrollObj = {};
     app.scrollAdd = function(target,fn,rsfn) {
         if (!(isIE() && isIE() < 9)) {
-        
                 scrollObj[target.attr("id")] = new IScroll(target[0],{
                     probeType: 3,
                     mouseWheel: !is_mobile,
@@ -55,7 +54,7 @@
                 });
                 scrollObj[target.attr("id")].on('scroll', function() {
                     var that = this;
-                    if(fn){fn(that)}
+                    if(fn){fn(that);}
                 });
             
             $("img").unbind("load").bind("load", function() {
@@ -63,12 +62,17 @@
                     obj.refresh();
                 });
             });
+        }else{
+            target.css("overflow","auto");
+            scrollObj[target.attr("id")].refresh=function(){};
         }
         app.resizeFn["sc_"+target.attr("id")]=function(){
-            if(refn){refn()}
+            if(rsfn){
+                rsfn();
+            }
             scrollObj[target.attr("id")].refresh();
-        }
-    }
+        };
+    };
     /*自适应处理*/
     app.resizeFn={};
     app.resizeFn.defaule=function(){
@@ -106,14 +110,14 @@
                 "transform": "scale(" + showSize + ")"
             });
         }
-    }
+    };
     /*先执行一次*/
     app.readFn.resize = app.resizeFn.defaule;
     /*屏幕有变动的时候再执行*/
     $(window).on("resize", function(){
         $.each(app.resizeFn,function(i,n){
             n();
-        })
+        });
     });
     /****兼容****/
     var android = function() {
@@ -127,7 +131,7 @@
         } else {
             return false;
         }
-    }
+    };
     if (android()) {
         var v = android().split(".");
         if (Number(v[0]) <= 4 && Number(v[1]) < 4) {}

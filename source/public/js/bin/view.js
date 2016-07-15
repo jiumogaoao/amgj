@@ -69,7 +69,7 @@ app.view.show={
                     },1000);
                 }
             }
-}
+};
 
 app.view.load=function(url){
     $("#all").append('<div id="newPage"></div>');
@@ -81,5 +81,5 @@ app.view.load=function(url){
             $("#newPage").html(html);
         } 
     });
-}
+};
 })();

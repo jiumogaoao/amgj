@@ -1,6 +1,6 @@
 // JavaScript Document
 ;(function () {
-	app.route={}
+	app.route={};
     /*页面栈*/
     var pageArry=[];
     /*跳页方法*/

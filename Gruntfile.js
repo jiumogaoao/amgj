@@ -11,17 +11,18 @@ module.exports = function(grunt){
 			"jQuery": true
 		  }
 		},
-		bin:[],
+		bin:['source/public/js/bin/control.js','source/public/js/bin/main.js','source/public/js/bin/view.js'],
 		js:['source/public/js/page/**/*']
 	},
 		clean:{
-			public:['dist/public/js/**/*','dist/public/css/**/*','dist/public/img/**/*','dist/public/font/**/*'],
-			html:['dist/application/views/page/**/*'],
+			public:['dist/public/js/bin/**/*','dist/public/js/page/**/*','dist/public/js/thirdParty/**/*','dist/public/css/**/*','dist/public/img/**/*','dist/public/font/**/*'],
+			html:['dist/application/views/page/**/*','dist/application/views/template/**/*'],
 			control:['dist/application/controllers/**/*']
 			},
 		copy:{
 			font:{expand: true, src: ['**'],cwd: 'source/public/font/', dest: 'dist/public/font/'},
-			html:{expand: true, src: ['**'],cwd: 'source/application/views/page/', dest: 'dist/application/views/page/'},
+			page:{expand: true, src: ['**'],cwd: 'source/application/views/page/', dest: 'dist/application/views/page/'},
+			template:{expand: true, src: ['**'],cwd: 'source/application/views/template/', dest: 'dist/application/views/template/'},
 			control:{expand: true, src: ['**'],cwd: 'source/application/controllers/', dest: 'dist/application/controllers/'}
 			},
         cssmin: {
@@ -30,17 +31,16 @@ module.exports = function(grunt){
                 banner: '/*! This is the grunt test ' +      //添加自定义的banner
                 '<%= grunt.template.today("yyyy-mm-dd") %> */'
             },
-            basic: {cwd: 'source/public/css/', src: ['*.css'], dest: 'dist/public/css/css.css'}
+            basic: {expand: true,cwd: 'source/public/css/', src: ['*.css'], dest: 'dist/public/css/'}
         },
         uglify: {
             options: {
                 banner: '/*! This is uglify test - ' +
                 '<%= grunt.template.today("yyyy-mm-dd") %> */'
             },
-			bin: {src: ['source/public/js/bin/**/*'], dest: 'source/public/js/cache/bin.js'},
-			page: {src: ['source/public/js/page/**/*'], dest: 'source/public/js/cache/page.js'},
-			thirdParty:{src: ['source/public/js/thirdParty/**/*'], dest: 'source/public/js/cache/thirdParty.js'},
-			end:{src: ['source/public/js/cache/bin.js','source/public/js/cache/thirdParty.js','source/public/js/cache/page.js'], dest: 'dist/public/js/js.js'}
+			bin: {expand: true,cwd:'source/public/js/bin/',src: ['**/*'], dest: 'dist/public/js/bin/'},
+			page: {expand: true,cwd:'source/public/js/page/',src: ['**/*'], dest: 'dist/public/js/page/'},
+			thirdParty:{expand: true,cwd:'source/public/js/thirdParty/',src: ['**/*'], dest: 'dist/public/js/thirdParty/'}
             },
 		htmlmin:{
 			options: {
