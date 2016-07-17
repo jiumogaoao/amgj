@@ -1,7 +1,33 @@
 <div id="index_page">
 	<div class="warp">
 		<div class="iscroll">
-			<div class="centerFrame"></div>
+			<div id="banner">
+				<div class="centerFrame">
+					<img src="/public/img/logo.png" id="centerLogo"/>
+					<div class="title">傲漫国际</div>
+					<div class="dsc">no team but word</div>
+					<div class="point">一切注定在这聚集</div>
+					<div class="point">一切注定在这登峰造极</div>
+					<div class="point">一切注定在这各展所长</div>
+					<div class="link">QQ:394127821</div>
+					<div class="link">TEL:18520408028</div>
+					<div class="link">WX:jiumogaoao</div>
+				</div>
+			</div>
+			<div id="cover">
+				<div class="centerFrame">
+					<div class="left">
+						<div class="title">全平台</div>
+						<div class="dsc">PC、MAC、IPHONE、IPAD、安卓一次开发，全平台运行</div>
+						
+					</div>
+					<div class="right">
+						
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </div>
