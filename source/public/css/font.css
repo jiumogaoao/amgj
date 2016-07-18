@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('/public/font/icomoon.eot?gafv3f');
+    src:    url('/public/font/icomoon.eot?gafv3f#iefix') format('embedded-opentype'),
+        url('/public/font/icomoon.ttf?gafv3f') format('truetype'),
+        url('/public/font/icomoon.woff?gafv3f') format('woff'),
+        url('/public/font/icomoon.svg?gafv3f#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-safari:before {
+    content: "\e90e";
+}
+.icon-360:before {
+    content: "\e900";
+}
+.icon-android:before {
+    content: "\e901";
+}
+.icon-chrome:before {
+    content: "\e902";
+}
+.icon-firefox:before {
+    content: "\e903";
+}
+.icon-H5:before {
+    content: "\e904";
+}
+.icon-ie:before {
+    content: "\e905";
+}
+.icon-iOS:before {
+    content: "\e906";
+}
+.icon-js-liebao:before {
+    content: "\e907";
+}
+.icon-js-MAXN:before {
+    content: "\e908";
+}
+.icon-opera:before {
+    content: "\e909";
+}
+.icon-pc:before {
+    content: "\e90a";
+}
+.icon-phone:before {
+    content: "\e90b";
+}
+.icon-QQ:before {
+    content: "\e90c";
+}
+.icon-微信:before {
+    content: "\e90d";
+}
+
