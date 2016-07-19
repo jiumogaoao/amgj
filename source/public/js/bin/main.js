@@ -45,32 +45,32 @@
     app.scrollObj = {};
     app.scrollAdd = function(target,fn,rsfn) {
         if (!(isIE() && isIE() < 9)) {
-                scrollObj[target.attr("id")] = new IScroll(target[0],{
+                app.scrollObj[target.attr("id")] = new IScroll(target[0],{
                     probeType: 3,
                     mouseWheel: !is_mobile,
                     scrollbars: !is_mobile,
                     click: true,
                     bounce: is_mobile
                 });
-                scrollObj[target.attr("id")].on('scroll', function() {
+                app.scrollObj[target.attr("id")].on('scroll', function() {
                     var that = this;
                     if(fn){fn(that);}
                 });
             
             $("img").unbind("load").bind("load", function() {
-                $.each(scrollObj, function(id, obj) {
+                $.each(app.scrollObj, function(id, obj) {
                     obj.refresh();
                 });
             });
         }else{
             target.css("overflow","auto");
-            scrollObj[target.attr("id")].refresh=function(){};
+            app.scrollObj[target.attr("id")].refresh=function(){};
         }
         app.resizeFn["sc_"+target.attr("id")]=function(){
             if(rsfn){
                 rsfn();
             }
-            scrollObj[target.attr("id")].refresh();
+            app.scrollObj[target.attr("id")].refresh();
         };
     };
     /*自适应处理*/

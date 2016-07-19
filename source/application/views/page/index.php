@@ -1,5 +1,5 @@
 <div id="index_page">
-	<div class="warp">
+	<div class="warp" id="indexScroll">
 		<div class="iscroll">
 			<div id="banner">
 				<div class="centerFrame">
@@ -20,12 +20,12 @@
 						<div class="title">全平台</div>
 						<div class="dsc">PC、IOS、安卓、微信一次开发，全平台运行</div>
 						<div class="pointFrame">
-							<div class="point"><span class="icon-iOS"></span></div>
-                            <div class="point"><span class="icon-android"></span></div>
-                            <div class="point"><span class="icon-H5"></span></div>
-                            <div class="point"><span class="icon-pc"></span></div>
-                            <div class="point"><span class="icon-phone"></span></div>
-                            <div class="point"><span class="icon-微信"></span></div>
+							<div class="point icon">&#xe906;</div>
+                            <div class="point icon">&#xe901;</div>
+                            <div class="point icon">&#xe904;</div>
+                            <div class="point icon">&#xe90a;</div>
+                            <div class="point icon">&#xe90b;</div>
+                            <div class="point icon">&#xe90d;</div>
                             <div class="clear"></div>
 						</div>
 					</div>
@@ -33,14 +33,14 @@
 						<div class="title">全兼容</div>
 						<div class="dsc">无论IE、firefox、chrome还是360、猎豹、遨游，国内国外所有浏览器全部兼容</div>
                         <div class="pointFrame">
-							<div class="point"><span class="icon-ie"></span></div>
-                            <div class="point"><span class="icon-firefox"></span></div>
-                            <div class="point"><span class="icon-chrome"></span></div>
-                            <div class="point"><span class="icon-safari"></span></div>
-                            <div class="point"><span class="icon-opera"></span></div>
-                            <div class="point"><span class="icon-360"></span></div>
-                            <div class="point"><span class="icon-js-MAXN"></span></div>
-                            <div class="point"><span class="icon-js-liebao"></span></div>
+							<div class="point icon">&#xe905;</div>
+                            <div class="point icon">&#xe903;</div>
+                            <div class="point icon">&#xe902;</div>
+                            <div class="point icon">&#xe90e;</div>
+                            <div class="point icon">&#xe909;</div>
+                            <div class="point icon">&#xe900;</div>
+                            <div class="point icon">&#xe908;</div>
+                            <div class="point icon">&#xe907;</div>
                             <div class="clear"></div>
 						</div>
 					</div>
