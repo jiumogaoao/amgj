@@ -25,7 +25,7 @@ class main extends CI_Controller {
 		$this->load->view('template/style',$headData);
 		$this->load->view('template/script',$headData);
 		$this->load->view('page/main');
-		$footData['script']=['public/js/bin/main.js','public/js/bin/view.js','public/js/bin/control.js'];
+		$footData['script']=['public/js/bin/main.js','public/js/bin/view.js','public/js/bin/route.js'];
 		$this->load->view('template/script',$footData);
 	}
 }

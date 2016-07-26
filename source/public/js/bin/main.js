@@ -8,7 +8,7 @@
         });
     });
     /*是否IE*/
-    function isIE() {
+    function isIEA() {
         var userAgent = navigator.userAgent;
         //取得浏览器的userAgent字符串
         var iIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
@@ -22,6 +22,7 @@
             return false;
         }
     }
+	var isIE=isIEA();
     /*是否手机*/
     function is_mobileA() {
         var regex_match = /(nokia|iphone|android|motorola|^mot-|softbank|foma|docomo|kddi|up.browser|up.link|htc|dopod|blazer|netfront|helio|hosin|huawei|novarra|CoolPad|webos|techfaith|palmsource|blackberry|alcatel|amoi|ktouch|nexian|samsung|^sam-|s[cg]h|^lge|ericsson|philips|sagem|wellcom|bunjalloo|maui|symbian|smartphone|midp|wap|phone|windows ce|iemobile|^spice|^bird|^zte-|longcos|pantech|gionee|^sie-|portalmmm|jigs browser|hiptop|^benq|haier|^lct|operas*mobi|opera*mini)/i;
@@ -38,13 +39,9 @@
     }
     var is_mobile = is_mobileA();
     /********************自适应**********************/
-    var myScroll = {
-        refresh: function() {}
-    };
-    app.scrollFn = {};
     app.scrollObj = {};
     app.scrollAdd = function(target,fn,rsfn) {
-        if (!(isIE() && isIE() < 9)) {
+        if (!(isIE && isIE < 9)) {
                 app.scrollObj[target.attr("id")] = new IScroll(target[0],{
                     probeType: 3,
                     mouseWheel: !is_mobile,
@@ -100,7 +97,7 @@
             }
         }
         
-        if (isIE() && isIE() < 9) {
+        if (isIE && isIE < 9) {
             $("body").css({
                 "zoom": showSize
             });
@@ -120,7 +117,7 @@
         });
     });
     /****兼容****/
-    var android = function() {
+    var androidA = function() {
         var u = window.navigator.userAgent;
         var num;
         //移动端
@@ -132,8 +129,9 @@
             return false;
         }
     };
-    if (android()) {
-        var v = android().split(".");
+	var android=androidA();
+    if (android) {
+        var v = android.split(".");
         if (Number(v[0]) <= 4 && Number(v[1]) < 4) {}
     }
 })();
